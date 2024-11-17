@@ -1,27 +1,12 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from './../hooks/useAuth';
 
 const Navbar = () => {
-  // Simulated user authentication state
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [user, setUser] = useState({
-    name: 'John Doe',
-    profilePhoto: 'https://via.placeholder.com/40', // Replace with actual photo URL
-  });
+  const { user, logoutUser } = useAuth();
 
   const handleLogout = () => {
-    setIsLoggedIn(false);
-    setUser(null);
+    logoutUser();
   };
-
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-    setUser({
-      name: 'John Doe',
-      profilePhoto: 'https://via.placeholder.com/40',
-    });
-  };
-
   return (
     <nav className='bg-[#282520] text-white shadow-md'>
       <div className='container mx-auto px-4 py-3 flex items-center justify-between'>
@@ -35,7 +20,7 @@ const Navbar = () => {
           <Link to='/' className='hover:text-gray-300'>
             Home
           </Link>
-          {isLoggedIn && (
+          {user && (
             <>
               <Link to='/update-profile' className='hover:text-gray-300'>
                 Update Profile
@@ -48,11 +33,11 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center space-x-4'>
-          {isLoggedIn ? (
+          {user ? (
             <div className='flex gap-5 items-center'>
               <img
-                title='User Profile'
-                src={user.profilePhoto}
+                title={user?.displayName}
+                src={user?.photoURL}
                 alt='User Profile'
                 className='w-10 h-10 rounded-full cursor-pointer'
               />
@@ -67,12 +52,12 @@ const Navbar = () => {
               </div>
             </div>
           ) : (
-            <button
-              onClick={handleLogin}
+            <Link
+              to={'/login'}
               className='bg-[#94794A] hover:bg-[#262626] text-white px-4 py-2 rounded'
             >
               Login
-            </button>
+            </Link>
           )}
         </div>
       </div>

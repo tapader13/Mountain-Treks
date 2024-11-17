@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const AdbentureExp = () => {
   const [adventures, setAdventures] = useState([]);
@@ -34,9 +35,11 @@ const AdbentureExp = () => {
                   </li>
                 ))}
               </ul>
-              <button className='mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition'>
-                Explore Now
-              </button>
+              <Link to={`/adventure/${adventure.id}`}>
+                <button className='mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition'>
+                  Explore Now
+                </button>
+              </Link>
             </div>
           </div>
         ))}
