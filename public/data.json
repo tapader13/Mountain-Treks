@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "Alpine Glacier Trek",
+    "image": "https://i.postimg.cc/SRhqvkb1/Untitled.jpg",
+    "category": "Trekking",
+    "shortDescription": "Discover breathtaking alpine landscapes and trek across ancient glaciers.",
+    "cost": "$180 per person",
+    "bookingAvailability": true,
+    "location": "Swiss Alps, Switzerland",
+    "duration": "7 hours",
+    "adventureLevel": "Advanced",
+    "includedItems": [
+      "Crampons",
+      "Professional Guide",
+      "Lunch Pack",
+      "Safety Equipment"
+    ],
+    "ecoFriendlyFeatures": [
+      "Glacier conservation support",
+      "Reusable water bottles provided",
+      "Eco-friendly trekking gear"
+    ],
+    "maxGroupSize": 8,
+    "specialInstructions": [
+      "Wear warm, layered clothing.",
+      "Bring sunscreen and sunglasses.",
+      "Follow the guide’s instructions carefully."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Mountain Summit Challenge",
+    "image": "https://i.postimg.cc/m2SZKzDY/Untitled-jpg1.jpg",
+    "category": "Climbing",
+    "shortDescription": "Conquer the peak of one of the world’s most stunning mountains.",
+    "cost": "$250 per person",
+    "bookingAvailability": false,
+    "location": "Mount Kilimanjaro, Tanzania",
+    "duration": "3 days",
+    "adventureLevel": "Expert",
+    "includedItems": [
+      "Climbing Gear",
+      "Experienced Sherpa Guide",
+      "Campsite Access",
+      "All Meals and Drinks"
+    ],
+    "ecoFriendlyFeatures": [
+      "Leave No Trace policy",
+      "Eco-friendly waste management",
+      "Support local communities"
+    ],
+    "maxGroupSize": 6,
+    "specialInstructions": [
+      "Train adequately before the trip.",
+      "Carry extra warm clothing.",
+      "Ensure to acclimatize properly."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Scenic Mountain Bike Trail",
+    "image": "https://i.postimg.cc/NftfN7gG/Untitled-jpg2.jpg",
+    "category": "Cycling",
+    "shortDescription": "Explore mountain trails on eco-friendly bikes for an adrenaline-filled adventure.",
+    "cost": "$100 per person",
+    "bookingAvailability": true,
+    "location": "Rocky Mountains, Canada",
+    "duration": "6 hours",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Mountain Bike Rental",
+      "Helmet",
+      "Trail Map",
+      "Energy Snacks"
+    ],
+    "ecoFriendlyFeatures": [
+      "Non-motorized transport",
+      "Reforestation initiative",
+      "Low-impact trail usage"
+    ],
+    "maxGroupSize": 12,
+    "specialInstructions": [
+      "Wear padded cycling shorts.",
+      "Stay hydrated during the ride.",
+      "Follow trail safety guidelines."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Sunset Ridge Hike",
+    "image": "https://i.postimg.cc/qMcg0DmC/Untitled-jpg3.jpg",
+    "category": "Hiking",
+    "shortDescription": "Enjoy a stunning sunset from a picturesque mountain ridge.",
+    "cost": "$75 per person",
+    "bookingAvailability": true,
+    "location": "Blue Ridge Mountains, USA",
+    "duration": "3 hours",
+    "adventureLevel": "Beginner",
+    "includedItems": [
+      "Local Guide",
+      "Flashlight",
+      "Snacks",
+      "Reusable Water Bottle"
+    ],
+    "ecoFriendlyFeatures": [
+      "Support local conservation efforts",
+      "No plastic waste policy",
+      "Use of eco-trails"
+    ],
+    "maxGroupSize": 15,
+    "specialInstructions": [
+      "Wear sturdy hiking boots.",
+      "Carry a jacket for cooler evenings.",
+      "Bring a reusable water bottle."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Wildflower Valley Trek",
+    "image": "https://i.postimg.cc/jSKw7YWX/yu.jpg",
+    "category": "Nature Walk",
+    "shortDescription": "Wander through a valley filled with vibrant wildflowers and mountain views.",
+    "cost": "$60 per person",
+    "bookingAvailability": true,
+    "location": "Valley of Flowers, India",
+    "duration": "4 hours",
+    "adventureLevel": "Easy",
+    "includedItems": [
+      "Guided Nature Walk",
+      "Wildflower Guidebook",
+      "Light Refreshments"
+    ],
+    "ecoFriendlyFeatures": [
+      "Biodiversity preservation efforts",
+      "Minimal impact on local flora",
+      "Use of eco-certified trails"
+    ],
+    "maxGroupSize": 20,
+    "specialInstructions": [
+      "Do not pluck flowers.",
+      "Wear comfortable walking shoes.",
+      "Carry a camera for amazing shots!"
+    ]
+  }
+]
