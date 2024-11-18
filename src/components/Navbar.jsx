@@ -18,8 +18,8 @@ const Navbar = () => {
       <div className='container mx-auto px-4 py-3 flex items-center justify-between'>
         {/* Website Name */}
         <Link to='/' className='text-2xl font-bold'>
-          {/* Mountain Treks */}
-          {user?.email}
+          Mountain Treks
+          {/* {user?.email} */}
         </Link>
 
         {/* Navigation Links */}
