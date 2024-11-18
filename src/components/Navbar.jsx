@@ -25,7 +25,7 @@ const Navbar = () => {
               <Link to='/update-profile' className='hover:text-gray-300'>
                 Update Profile
               </Link>
-              <Link to='/update-profile' className='hover:text-gray-300'>
+              <Link to='/myprofile' className='hover:text-gray-300'>
                 User Profile
               </Link>
             </>

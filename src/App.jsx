@@ -6,6 +6,7 @@ import Registration from './components/Registration';
 import AdventureDetails from './components/AdventureDetails';
 import PrivateRoute from './private/PrivateRoute';
 import Error from './components/Error';
+import ProfilePage from './pages/ProfilePage';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -25,6 +26,15 @@ const router = createBrowserRouter([
       <PrivateRoute>
         {' '}
         <AdventureDetails />{' '}
+      </PrivateRoute>
+    ),
+  },
+
+  {
+    path: '/myprofile',
+    element: (
+      <PrivateRoute>
+        <ProfilePage />
       </PrivateRoute>
     ),
   },
