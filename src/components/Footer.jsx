@@ -39,7 +39,7 @@ const Footer = () => {
             <h2 className='text-lg font-bold mb-3'>Follow Us</h2>
             <div className='flex space-x-4'>
               <a
-                href='https://facebook.com'
+                href='https://www.facebook.com/muhammad.minhaj.799316'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-gray-400 hover:text-blue-500 text-2xl'
@@ -47,7 +47,7 @@ const Footer = () => {
                 <FaFacebook />
               </a>
               <a
-                href='https://twitter.com'
+                href='https://x.com/MinhajTapader'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-gray-400 hover:text-blue-400 text-2xl'
@@ -55,7 +55,7 @@ const Footer = () => {
                 <FaTwitter />
               </a>
               <a
-                href='https://instagram.com'
+                href='https://www.instagram.com/uddintapader/?next=%2F&hl=en'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-gray-400 hover:text-pink-500 text-2xl'
@@ -63,7 +63,7 @@ const Footer = () => {
                 <FaInstagram />
               </a>
               <a
-                href='https://linkedin.com'
+                href='https://www.linkedin.com/in/minhaj-uddin-5b1a20338/'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-gray-400 hover:text-blue-700 text-2xl'
