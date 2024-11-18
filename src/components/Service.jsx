@@ -41,6 +41,7 @@ const Service = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
         {features.map((feature, index) => (
           <div
+            data-aos='fade-down-left'
             key={index}
             className='bg-white border group hover:text-white hover:bg-[#94794A] border-[#94794A] rounded-lg p-6 flex flex-col items-center text-center'
           >

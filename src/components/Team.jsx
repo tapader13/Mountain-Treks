@@ -16,6 +16,7 @@ const Team = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
         {teamMembers.map((member, index) => (
           <div
+            data-aos='fade-down'
             key={index}
             className='bg-white shadow-lg rounded-lg p-6 text-center'
           >

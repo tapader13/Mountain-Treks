@@ -17,6 +17,7 @@ const AdbentureExp = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
         {adventures.map((adventure) => (
           <div
+            data-aos='fade-up'
             key={adventure.id}
             className='bg-white shadow-lg rounded-lg overflow-hidden'
           >
