@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
+import { DynamicTitle } from './DynamicTItle';
 
 const MyProfile = () => {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ const MyProfile = () => {
 
   return (
     <div className='min-h-screen bg-gray-100 p-6 flex justify-center items-center'>
+      <DynamicTitle />
       <div className='max-w-4xl bg-white shadow-lg rounded-lg p-6'>
         <h1 className='text-3xl font-bold text-gray-800'>
           Welcome, {user ? user?.displayName : 'User'}!

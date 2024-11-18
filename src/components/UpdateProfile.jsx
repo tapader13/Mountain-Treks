@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, updateProfile } from 'firebase/auth';
+import { DynamicTitle } from './DynamicTItle';
 
 const UpdateProfile = () => {
   const [name, setName] = useState('');
@@ -34,6 +35,7 @@ const UpdateProfile = () => {
 
   return (
     <div className='flex justify-center items-center min-h-screen bg-gray-100 p-4'>
+      <DynamicTitle />
       <div className='w-full max-w-lg bg-white p-6 rounded-lg shadow-md'>
         <h2 className='text-3xl font-semibold text-center text-gray-700 mb-6'>
           Update Profile

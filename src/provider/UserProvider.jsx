@@ -55,6 +55,7 @@ const UserProvider = ({ children }) => {
         googleLogin,
         forgetPass,
         updateProfileUser,
+        setUser,
       }}
     >
       {children}

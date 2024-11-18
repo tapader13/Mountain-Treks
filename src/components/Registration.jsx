@@ -4,7 +4,7 @@ import useAuth from '../hooks/useAuth';
 import { DynamicTitle } from './DynamicTItle';
 
 const Registration = () => {
-  const { signUpUser, googleLogin, updateProfileUser } = useAuth();
+  const { signUpUser, googleLogin, updateProfileUser, setUser } = useAuth();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [photoURL, setPhotoURL] = useState('');
@@ -46,6 +46,11 @@ const Registration = () => {
             photoURL: photoURL,
           })
             .then(() => {
+              setUser((prev) => ({
+                ...prev,
+                displayName: name,
+                photoURL: photoURL,
+              }));
               navigate('/');
             })
             .catch((err) => {

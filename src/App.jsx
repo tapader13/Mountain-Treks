@@ -1,15 +1,15 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
-import Login from './components/Login';
 import Registration from './components/Registration';
 import AdventureDetails from './components/AdventureDetails';
 import PrivateRoute from './private/PrivateRoute';
 import Error from './components/Error';
-import ProfilePage from './pages/ProfilePage';
-import UpdataProfilePage from './pages/UpdataProfilePage';
 import ForgetPass from './components/ForgetPass';
 import Home from './components/Home';
+import Login from './components/Login';
+import MyProfile from './components/MyProfile';
+import UpdateProfile from './components/UpdateProfile';
 
 const router = createBrowserRouter([
   {
@@ -29,35 +29,35 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: '/login',
+        element: <Login />,
+      },
+      {
+        path: '/registration',
+        element: <Registration />,
+      },
+      {
+        path: '/forgotpassword',
+        element: <ForgetPass />,
+      },
+      {
+        path: '/myprofile',
+        element: (
+          <PrivateRoute>
+            <MyProfile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/updateprofile',
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
+          </PrivateRoute>
+        ),
+      },
     ],
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/registration',
-    element: <Registration />,
-  },
-  {
-    path: '/forgotpassword',
-    element: <ForgetPass />,
-  },
-  {
-    path: '/myprofile',
-    element: (
-      <PrivateRoute>
-        <ProfilePage />
-      </PrivateRoute>
-    ),
-  },
-  {
-    path: '/updateprofile',
-    element: (
-      <PrivateRoute>
-        <UpdataProfilePage />
-      </PrivateRoute>
-    ),
   },
 
   {
