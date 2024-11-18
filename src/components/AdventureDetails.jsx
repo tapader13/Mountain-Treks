@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import Modal from './Modal';
+import Modal from './Modal';
 
 const AdventureDetails = () => {
   const [showModal, setShowModal] = useState(false);
@@ -122,13 +122,13 @@ const AdventureDetails = () => {
       </div>
 
       {/* Uncomment Modal when ready */}
-      {/* {showModal && (
+      {showModal && (
         <Modal
-          title="Consultation Time"
-          message="Our experts are available between 10:00am and 8:00pm. Please contact us during these hours."
+          title='Consultation Time'
+          message='Our experts are available between 10:00am and 8:00pm. Please contact us during these hours.'
           onClose={() => setShowModal(false)}
         />
-      )} */}
+      )}
     </div>
   );
 };
