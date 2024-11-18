@@ -14,7 +14,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className='w-full md:w-1/3 mb-4 md:mb-0'>
+          <div className='w-full flex items-start flex-col md:items-center md:w-1/3 mb-4 md:mb-0'>
             <h2 className='text-lg font-bold mb-3'>Quick Links</h2>
             <ul className='space-y-2'>
               <li>
@@ -35,7 +35,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className='w-full md:w-1/3'>
+          <div className='w-full flex flex-col md:items-center items-start md:w-1/3'>
             <h2 className='text-lg font-bold mb-3'>Follow Us</h2>
             <div className='flex space-x-4'>
               <a

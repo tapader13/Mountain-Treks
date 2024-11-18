@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: "Acme", sans-serif;
+}
