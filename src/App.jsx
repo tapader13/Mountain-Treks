@@ -7,6 +7,8 @@ import AdventureDetails from './components/AdventureDetails';
 import PrivateRoute from './private/PrivateRoute';
 import Error from './components/Error';
 import ProfilePage from './pages/ProfilePage';
+import UpdataProfilePage from './pages/UpdataProfilePage';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <ProfilePage />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/updateprofile',
+    element: (
+      <PrivateRoute>
+        <UpdataProfilePage />
       </PrivateRoute>
     ),
   },
