@@ -46,9 +46,9 @@ const AdventureDetails = () => {
   };
 
   return (
-    <div className='h-screen bg-gray-100 flex flex-col'>
+    <div className='h-full bg-gray-100 flex flex-col'>
       <div className=''>
-        <div className=' mx-auto bg-white shadow-lg rounded-lg overflow-hidden h-full'>
+        <div className=' mx-auto bg-white shadow-lg  overflow-hidden h-full'>
           <img
             src={adventure.image}
             alt={adventure.title}

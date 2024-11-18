@@ -5,9 +5,16 @@ import { getAuth, updateProfile } from 'firebase/auth';
 const UpdateProfile = () => {
   const [name, setName] = useState('');
   const [photoURL, setPhotoURL] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleUpdateProfile = async () => {
+    setError('');
+    if (!name || !photoURL) {
+      setError('Name and Profile Photo URL are required.');
+      return;
+    }
+
     const auth = getAuth();
     const user = auth.currentUser;
 
@@ -16,15 +23,11 @@ const UpdateProfile = () => {
         await updateProfile(user, {
           displayName: name,
           photoURL: photoURL,
-        })
-          .then(() => {
-            navigate('/myprofile');
-          })
-          .catch((error) => {
-            console.error('Error updating profile: ', error);
-          });
+        });
+        navigate('/myprofile');
       } catch (error) {
         console.error('Error updating profile: ', error);
+        setError('Failed to update profile. Please try again later.');
       }
     }
   };
@@ -35,6 +38,7 @@ const UpdateProfile = () => {
         <h2 className='text-3xl font-semibold text-center text-gray-700 mb-6'>
           Update Profile
         </h2>
+        {error && <p className='text-red-500 text-center mb-4'>{error}</p>}
         <form>
           <div className='mb-4'>
             <label

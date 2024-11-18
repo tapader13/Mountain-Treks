@@ -9,28 +9,39 @@ import Error from './components/Error';
 import ProfilePage from './pages/ProfilePage';
 import UpdataProfilePage from './pages/UpdataProfilePage';
 import ForgetPass from './components/ForgetPass';
+import Home from './components/Home';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomePage />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/registration',
-    element: <Registration />,
-  },
-  {
-    path: '/adventure/:id',
-    element: (
-      <PrivateRoute>
-        {' '}
-        <AdventureDetails />{' '}
-      </PrivateRoute>
-    ),
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/adventure/:id',
+        element: (
+          <PrivateRoute>
+            {' '}
+            <AdventureDetails />{' '}
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/login',
+        element: <Login />,
+      },
+      {
+        path: '/registration',
+        element: <Registration />,
+      },
+      {
+        path: '/forgotpassword',
+        element: <ForgetPass />,
+      },
+    ],
   },
 
   {
@@ -49,10 +60,7 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
   },
-  {
-    path: '/forgotpassword',
-    element: <ForgetPass />,
-  },
+
   {
     path: '*',
     element: <Error />,
