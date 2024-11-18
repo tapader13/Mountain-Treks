@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from './../hooks/useAuth';
 
 const Login = () => {
@@ -8,8 +8,10 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const loc = useLocation();
   const handleSubmit = (e) => {
     e.preventDefault();
+    const frm = loc?.state?.from?.pathname || '/';
     if (!email || !password) {
       setError('Please fill in both fields');
       return;
@@ -19,7 +21,7 @@ const Login = () => {
       .then((user) => {
         const usr = user.user;
         console.log(usr);
-        navigate('/');
+        navigate(frm, { replace: true });
       })
       .catch((err) => {
         setError(err.message);
@@ -27,10 +29,12 @@ const Login = () => {
   };
   const handleGoogleLogin = async () => {
     try {
+      const frm = loc?.state?.from?.pathname || '/';
       googleLogin()
         .then((user) => {
           console.log(user.user);
-          navigate('/');
+
+          navigate(frm, { replace: true });
         })
         .catch((err) => {
           setError(err.message);
