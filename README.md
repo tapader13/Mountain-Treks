@@ -1,8 +1,56 @@
-# React + Vite
+# 🌿 Mountain Treks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Purpose
 
-Currently, two official plugins are available:
+**Eco-Adventure Experiences** is a blog website designed to promote eco-friendly travel adventures. Users can explore detailed information, consult experts, and interact through user profiles and authentication features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🌐 Live URL
+
+Hosted at: [Mountain Treks](https://as09-23d77.firebaseapp.com/)
+
+---
+
+## 📄 Key Features
+
+### 1️⃣ Responsive Layout  
+
+- Fully responsive single-column layout for desktop, tablet, and mobile views.
+
+### 2️⃣ Dynamic Content  
+
+- JSON-powered adventure data displayed dynamically on cards and detail pages.
+
+### 3️⃣ Authentication  
+
+- Email/Password login with validation.  
+- Google Sign-In for quick access.  
+
+### 4️⃣ Adventure Details  
+
+- Comprehensive adventure detail pages.  
+- "Talk with Expert" functionality based on consultation time.
+
+### 5️⃣ User Profile Management  
+
+- View and update profile with name and photo.
+
+### 6️⃣ Error Handling  
+
+- Custom 404 page with a button redirecting to the home route.
+
+### 7️⃣ Enhanced Experience  
+
+- Animations using AOS library.  
+- Dynamic page titles based on the route with useLocation().
+
+---
+
+## 📦 Packages Used
+
+- **React Router DOM**: For navigation and routing.
+- **Firebase**: For authentication and hosting.
+- **Tailwind CSS**: For styling and responsiveness.
+- **AOS**: For scroll animations.
+- **React Icon**: For icons

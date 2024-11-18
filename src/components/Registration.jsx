@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { updateProfile } from 'firebase/auth';
-import { auth } from '../firebase/firebase.init';
 import useAuth from '../hooks/useAuth';
+import { DynamicTitle } from './DynamicTItle';
 
 const Registration = () => {
-  const { signUpUser, googleLogin } = useAuth();
+  const { signUpUser, googleLogin, updateProfileUser } = useAuth();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [photoURL, setPhotoURL] = useState('');
@@ -18,7 +17,7 @@ const Registration = () => {
     try {
       googleLogin()
         .then((user) => {
-          console.log(user.user);
+          // console.log(user.user);
           navigate('/');
         })
         .catch((err) => {
@@ -38,22 +37,30 @@ const Registration = () => {
       );
       return;
     }
-    try {
-      const userCredential = await signUpUser(email, password);
-      const usr = userCredential.user;
-      await updateProfile(auth.currentUser, {
-        displayName: name,
-        photoURL: photoURL,
+
+    signUpUser(email, password)
+      .then((user) => {
+        if (user && !user.displayName) {
+          updateProfileUser({
+            displayName: name,
+            photoURL: photoURL,
+          })
+            .then(() => {
+              navigate('/');
+            })
+            .catch((err) => {
+              setError(err.message);
+            });
+        }
+      })
+      .catch((err) => {
+        setError(err.message);
       });
-      console.log('User registered successfully:', usr);
-      navigate('/');
-    } catch (err) {
-      setError(err.message);
-    }
   };
 
   return (
     <div className='flex justify-center items-center min-h-screen bg-gray-100'>
+      <DynamicTitle />
       <div className='w-full max-w-md p-6 bg-white shadow-lg rounded-md'>
         <h2 className='text-2xl font-bold text-center mb-6'>Register</h2>
 
@@ -104,6 +111,7 @@ const Registration = () => {
             <input
               type='text'
               id='photoURL'
+              required
               onChange={(e) => setPhotoURL(e.target.value)}
               className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
             />

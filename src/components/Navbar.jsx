@@ -9,12 +9,17 @@ const Navbar = () => {
   const handleLogout = () => {
     logoutUser();
   };
+  // console.log(user?.displayName, 5);
+  // console.log(user?.photoURL, 6);
+  // console.log(user, 8);
+
   return (
     <nav className='bg-[#282520] text-white shadow-md'>
       <div className='container mx-auto px-4 py-3 flex items-center justify-between'>
         {/* Website Name */}
         <Link to='/' className='text-2xl font-bold'>
-          Mountain Treks
+          {/* Mountain Treks */}
+          {user?.email}
         </Link>
 
         {/* Navigation Links */}
@@ -41,11 +46,13 @@ const Navbar = () => {
                 className='tooltip tooltip-left tooltip-primary'
                 data-tip={user?.displayName}
               >
-                <img
-                  src={user?.photoURL}
-                  alt='User Profile'
-                  className='w-10 h-10  rounded-full cursor-pointer'
-                />
+                {user && (
+                  <img
+                    src={user?.photoURL || user?.providerData[0]?.photoURL}
+                    alt='User Profile'
+                    className='w-10 h-10  rounded-full cursor-pointer'
+                  />
+                )}
               </div>
 
               <div className=''>

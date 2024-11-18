@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Modal from './Modal';
+import { DynamicTitle } from './DynamicTItle';
 
 const AdventureDetails = () => {
   const [showModal, setShowModal] = useState(false);
@@ -47,6 +48,7 @@ const AdventureDetails = () => {
 
   return (
     <div className='h-full bg-gray-100 flex flex-col'>
+      <DynamicTitle />
       <div className=''>
         <div className=' mx-auto bg-white shadow-lg  overflow-hidden h-full'>
           <img

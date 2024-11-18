@@ -29,21 +29,20 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      {
-        path: '/login',
-        element: <Login />,
-      },
-      {
-        path: '/registration',
-        element: <Registration />,
-      },
-      {
-        path: '/forgotpassword',
-        element: <ForgetPass />,
-      },
     ],
   },
-
+  {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/registration',
+    element: <Registration />,
+  },
+  {
+    path: '/forgotpassword',
+    element: <ForgetPass />,
+  },
   {
     path: '/myprofile',
     element: (

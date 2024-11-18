@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from './../hooks/useAuth';
+import { DynamicTitle } from './DynamicTItle';
 
 const Login = () => {
   const { loginUser, googleLogin } = useAuth();
@@ -20,7 +21,7 @@ const Login = () => {
     loginUser(email, password)
       .then((user) => {
         const usr = user.user;
-        console.log(usr);
+        // console.log(usr);
         navigate(frm, { replace: true });
       })
       .catch((err) => {
@@ -32,7 +33,7 @@ const Login = () => {
       const frm = loc?.state?.from?.pathname || '/';
       googleLogin()
         .then((user) => {
-          console.log(user.user);
+          // console.log(user.user);
 
           navigate(frm, { replace: true });
         })
@@ -45,6 +46,7 @@ const Login = () => {
   };
   return (
     <div className='flex items-center justify-center min-h-screen bg-gray-100'>
+      <DynamicTitle />
       <div className='bg-white p-8 rounded-lg shadow-lg w-full max-w-md'>
         <h2 className='text-2xl font-bold text-center mb-6'>Login</h2>
         {error && <p className='text-red-500 text-sm mb-4'>{error}</p>}

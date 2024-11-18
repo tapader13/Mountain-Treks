@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
+import { DynamicTitle } from './DynamicTItle';
 
 const ForgetPass = () => {
   const { forgetPass } = useAuth();
@@ -23,7 +24,7 @@ const ForgetPass = () => {
   };
   return (
     <div className='flex items-center justify-center min-h-screen bg-gray-100'>
-      {' '}
+      <DynamicTitle />{' '}
       <form onSubmit={handleSubmit}>
         <div className='mb-4'>
           <label

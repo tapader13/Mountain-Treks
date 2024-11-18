@@ -26,7 +26,7 @@ const UpdateProfile = () => {
         });
         navigate('/myprofile');
       } catch (error) {
-        console.error('Error updating profile: ', error);
+        // console.error('Error updating profile: ', error);
         setError('Failed to update profile. Please try again later.');
       }
     }
