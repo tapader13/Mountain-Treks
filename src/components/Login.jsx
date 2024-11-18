@@ -89,12 +89,13 @@ const Login = () => {
           >
             Login
           </button>
-          <a
-            href='/forgot-password'
+          <Link
+            state={{ email }}
+            to='/forgotpassword'
             className='text-sm text-blue-500 hover:underline block text-center mt-4'
           >
             Forgot Password?
-          </a>
+          </Link>
         </form>
         <div className='mt-6'>
           <button

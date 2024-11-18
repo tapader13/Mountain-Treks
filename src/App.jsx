@@ -8,6 +8,7 @@ import PrivateRoute from './private/PrivateRoute';
 import Error from './components/Error';
 import ProfilePage from './pages/ProfilePage';
 import UpdataProfilePage from './pages/UpdataProfilePage';
+import ForgetPass from './components/ForgetPass';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         <UpdataProfilePage />
       </PrivateRoute>
     ),
+  },
+  {
+    path: '/forgotpassword',
+    element: <ForgetPass />,
   },
   {
     path: '*',
