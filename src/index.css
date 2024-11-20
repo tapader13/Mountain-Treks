@@ -6,5 +6,19 @@
 @tailwind utilities;
 
 body {
+
     font-family: "Acme", sans-serif;
+}
+
+.box_sd {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-bg {
+    background: linear-gradient(to bottom, #0b0b0a, #1e1e1c);
+    color: #dcdcdc;
+}
+
+.footer-link:hover {
+    color: #a8d8ea;
 }

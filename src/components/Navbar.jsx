@@ -9,36 +9,36 @@ const Navbar = () => {
   const handleLogout = () => {
     logoutUser();
   };
-  // console.log(user?.displayName, 5);
-  // console.log(user?.photoURL, 6);
-  // console.log(user, 8);
 
   return (
-    <nav className='bg-[#282520] text-white shadow-md'>
+    <nav className='bg-gradient-to-r from-[#a8d8ea] to-[#ffffff] text-[#283046] shadow-md'>
       <div className='container mx-auto px-4 py-3 flex items-center justify-between'>
         {/* Website Name */}
-        <Link to='/' className='text-2xl font-bold'>
+        <Link
+          to='/'
+          className='text-2xl font-bold text-[#283046] hover:text-[#004d73]'
+        >
           Mountain Treks
-          {/* {user?.email} */}
         </Link>
 
         {/* Navigation Links */}
-        <div className='sm:flex hidden  items-center space-x-6'>
-          <Link to='/' className='hover:text-gray-300'>
+        <div className='sm:flex hidden items-center space-x-6'>
+          <Link to='/' className='hover:text-[#004d73]'>
             Home
           </Link>
           {user && (
             <>
-              <Link to='/updateprofile' className='hover:text-gray-300'>
+              <Link to='/updateprofile' className='hover:text-[#004d73]'>
                 Update Profile
               </Link>
-              <Link to='/myprofile' className='hover:text-gray-300'>
+              <Link to='/myprofile' className='hover:text-[#004d73]'>
                 User Profile
               </Link>
             </>
           )}
         </div>
 
+        {/* User Controls */}
         <div className='flex items-center space-x-4'>
           {user ? (
             <div className='flex gap-5 items-center'>
@@ -50,39 +50,41 @@ const Navbar = () => {
                   <img
                     src={user?.photoURL || user?.providerData[0]?.photoURL}
                     alt='User Profile'
-                    className='w-10 h-10  rounded-full cursor-pointer'
+                    className='w-10 h-10 rounded-full cursor-pointer border-2 border-[#a8d8ea] hover:border-[#004d73]'
                   />
                 )}
               </div>
 
-              <div className=''>
-                <button
-                  onClick={handleLogout}
-                  className='block w-full px-4 py-2 text-left bg-red-600 text-gray-100'
-                >
-                  Logout
-                </button>
-              </div>
+              <button
+                onClick={handleLogout}
+                className='block px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700'
+              >
+                Logout
+              </button>
             </div>
           ) : (
             <Link
-              to={'/login'}
-              className='bg-[#94794A] hover:bg-[#262626] text-white px-4 py-2 rounded'
+              to='/login'
+              className='bg-[#a8d8ea] hover:bg-[#004d73] text-white px-4 py-2 rounded'
             >
               Login
             </Link>
           )}
         </div>
+
+        {/* Mobile Menu Toggle */}
         <div className='sm:hidden'>
           <TiThMenuOutline
             onClick={() => setSidebar(!sidebar)}
-            className='text-3xl cursor-pointer '
+            className='text-3xl cursor-pointer text-[#283046] hover:text-[#004d73]'
           />
         </div>
+
+        {/* Mobile Sidebar */}
         {sidebar && (
-          <div className='fixed top-0 right-0 h-full bg-[#282520] w-64 z-50 shadow-lg p-4'>
+          <div className='fixed top-0 right-0 h-full bg-gradient-to-b from-[#a8d8ea] to-[#ffffff] w-64 z-50 shadow-lg p-4'>
             <button
-              className='text-gray-300 text-lg mb-6'
+              className='text-[#283046] text-lg mb-6 hover:text-[#004d73]'
               onClick={() => setSidebar(false)}
             >
               Close
@@ -91,7 +93,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to='/'
-                  className='hover:text-gray-300'
+                  className='hover:text-[#004d73]'
                   onClick={() => setSidebar(false)}
                 >
                   Home
@@ -102,7 +104,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       to='/updateprofile'
-                      className='hover:text-gray-300'
+                      className='hover:text-[#004d73]'
                       onClick={() => setSidebar(false)}
                     >
                       Update Profile
@@ -111,7 +113,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       to='/myprofile'
-                      className='hover:text-gray-300'
+                      className='hover:text-[#004d73]'
                       onClick={() => setSidebar(false)}
                     >
                       User Profile

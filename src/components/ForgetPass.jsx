@@ -25,7 +25,7 @@ const ForgetPass = () => {
   return (
     <div className='flex items-center justify-center min-h-screen bg-gray-100'>
       <DynamicTitle />{' '}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='max-w-sm bg-white w-full p-6'>
         <div className='mb-4'>
           <label
             htmlFor='email'
@@ -46,7 +46,7 @@ const ForgetPass = () => {
 
         <button
           type='submit'
-          className='w-full py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition'
+          className='w-full p-3 bg-[#a3dcf1] text-[#ffffff] font-semibold rounded-lg shadow-md hover:bg-[#5cacee]  focus:outline-none focus:ring-2 focus:ring-[#004d73] focus:ring-offset-2'
         >
           Reset password
         </button>

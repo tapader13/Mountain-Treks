@@ -13,17 +13,21 @@ const Banner = () => {
       <SwiperSlide>
         <img
           className='w-full h-full object-cover'
-          src='/istockphoto-2077392931-612x612.webp'
+          src='/andrew-darlington-_uFNDmzJKII-unsplash.jpg'
           alt=''
         />
       </SwiperSlide>
       <SwiperSlide>
-        <img className='w-full h-full object-cover' src='/images.jpg' alt='' />
+        <img
+          className='w-full h-full object-cover'
+          src='/joshua-woroniecki-qjrOBYNb_fM-unsplash.jpg'
+          alt=''
+        />
       </SwiperSlide>
       <SwiperSlide>
         <img
           className='w-full h-full object-cover'
-          src='/images.jpg3.jpg'
+          src='/joshua-woroniecki-TwWgefmZB_0-unsplash.jpg'
           alt=''
         />
       </SwiperSlide>

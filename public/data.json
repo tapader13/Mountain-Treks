@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Alpine Glacier Trek ",
-    "image": "https://i.postimg.cc/SRhqvkb1/Untitled.jpg",
+    "image": "https://i.postimg.cc/LXdc2dw9/alvaro-palacios-l-YUhek-WSuck-unsplash.jpg",
     "category": "Trekking",
     "shortDescription": "Discover breathtaking alpine landscapes and trek across ancient glaciers.",
     "cost": "$180 per person",
@@ -31,7 +31,7 @@
   {
     "id": 2,
     "title": "Mountain Summit Challenge",
-    "image": "https://i.postimg.cc/m2SZKzDY/Untitled-jpg1.jpg",
+    "image": "https://i.postimg.cc/Dyft2PjX/toa-heftiba-1-Nyx-Se-TXTwo-unsplash.jpg",
     "category": "Climbing",
     "shortDescription": "Conquer the peak of one of the world’s most stunning mountains.",
     "cost": "$250 per person",
@@ -60,7 +60,7 @@
   {
     "id": 3,
     "title": "Scenic Mountain Bike Trail",
-    "image": "https://i.postimg.cc/NftfN7gG/Untitled-jpg2.jpg",
+    "image": "https://i.postimg.cc/mgtJ92GZ/tom-jur-B5rh5p-K-lxk-unsplash.jpg",
     "category": "Cycling",
     "shortDescription": "Explore mountain trails on eco-friendly bikes for an adrenaline-filled adventure.",
     "cost": "$100 per person",
@@ -89,7 +89,7 @@
   {
     "id": 4,
     "title": "Sunset Ridge Hike",
-    "image": "https://i.postimg.cc/qMcg0DmC/Untitled-jpg3.jpg",
+    "image": "https://i.postimg.cc/V6BVwJXg/tom-jur-vfxmr38-Yg-VY-unsplash.jpg",
     "category": "Hiking",
     "shortDescription": "Enjoy a stunning sunset from a picturesque mountain ridge.",
     "cost": "$75 per person",
@@ -118,7 +118,7 @@
   {
     "id": 5,
     "title": "Wildflower Valley Trek",
-    "image": "https://i.postimg.cc/jSKw7YWX/yu.jpg",
+    "image": "https://i.postimg.cc/HkDTQjnj/tom-jur-Apmovtb-Sr-w-unsplash.jpg",
     "category": "Nature Walk",
     "shortDescription": "Wander through a valley filled with vibrant wildflowers and mountain views.",
     "cost": "$60 per person",

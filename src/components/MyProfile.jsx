@@ -13,7 +13,7 @@ const MyProfile = () => {
     <div className='min-h-screen bg-gray-100 p-6 flex justify-center items-center'>
       <DynamicTitle />
       <div className='max-w-4xl bg-white shadow-lg rounded-lg p-6'>
-        <h1 className='text-3xl font-bold text-gray-800'>
+        <h1 className='text-3xl font-bold text-[#004d73]'>
           Welcome, {user ? user?.displayName : 'User'}!
         </h1>
 
@@ -37,7 +37,7 @@ const MyProfile = () => {
           <Link to={'/updateprofile'}>
             <button
               onClick={handleUpdateProfile}
-              className='w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
+              className='w-full py-2 px-4 bg-[#a3dcf1] text-[#ffffff] font-semibold rounded-lg hover:bg-[#5cacee] focus:outline-none focus:ring-2 focus:ring-[#004d73] focus:ring-offset-2'
             >
               Update Profile
             </button>

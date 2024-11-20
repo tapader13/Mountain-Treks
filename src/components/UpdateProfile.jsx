@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, updateProfile } from 'firebase/auth';
 import { DynamicTitle } from './DynamicTItle';
+import useAuth from '../hooks/useAuth';
 
 const UpdateProfile = () => {
   const [name, setName] = useState('');
   const [photoURL, setPhotoURL] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { user: usr, setUser } = useAuth();
 
   const handleUpdateProfile = async () => {
     setError('');
@@ -24,8 +26,19 @@ const UpdateProfile = () => {
         await updateProfile(user, {
           displayName: name,
           photoURL: photoURL,
-        });
-        navigate('/myprofile');
+        })
+          .then(() => {
+            setUser((prev) => ({
+              ...prev,
+              displayName: name,
+              photoURL: photoURL,
+            }));
+            navigate('/myprofile');
+          })
+          .catch((error) => {
+            // console.error('Error updating profile: ', error);
+            setError('Failed to update profile. Please try again later.');
+          });
       } catch (error) {
         // console.error('Error updating profile: ', error);
         setError('Failed to update profile. Please try again later.');
@@ -37,7 +50,7 @@ const UpdateProfile = () => {
     <div className='flex justify-center items-center min-h-screen bg-gray-100 p-4'>
       <DynamicTitle />
       <div className='w-full max-w-lg bg-white p-6 rounded-lg shadow-md'>
-        <h2 className='text-3xl font-semibold text-center text-gray-700 mb-6'>
+        <h2 className='text-3xl font-semibold text-center text-[#004d73] mb-6'>
           Update Profile
         </h2>
         {error && <p className='text-red-500 text-center mb-4'>{error}</p>}
@@ -77,7 +90,7 @@ const UpdateProfile = () => {
           <button
             type='button'
             onClick={handleUpdateProfile}
-            className='w-full p-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500'
+            className='w-full p-3 bg-[#a3dcf1] text-[#ffffff] font-semibold rounded-lg shadow-md hover:bg-[#5cacee]  focus:outline-none focus:ring-2 focus:ring-[#004d73] focus:ring-offset-2'
           >
             Update Information
           </button>
